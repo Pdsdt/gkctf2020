@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    image: ezpop
+    build: ./
+    environment:
+      - FLAG=flag{flag_test}
+    ports:
+      - "5000:80"
+    restart: always

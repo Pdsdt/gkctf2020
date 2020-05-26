@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+if [ -f /flag.sh ]; then
+    source /flag.sh
+fi
+
+if [ "${1#-}" != "$1" ]; then
+    set -- apache2-foreground "$@"
+fi
+
+echo "Running..."
+exec "$@"

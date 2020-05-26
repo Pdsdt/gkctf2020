@@ -1,0 +1,16 @@
+version: "3"
+services:
+   web:
+     build: .
+     depends_on:
+       - redis
+     ports:
+       - "5000:80"
+     restart: always
+     environment:
+       - FLAG=flag{aaa}
+     tty: true
+   redis:
+     build: ./redis/
+     environment:
+       - FLAG=flag{aaa}

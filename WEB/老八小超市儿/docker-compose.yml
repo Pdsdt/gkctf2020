@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    image: market
+    build: ./
+    environment:
+      - FLAG=flag{flag_test}
+    ports:
+      - "5005:80"
+    restart: always

@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <title>计算器</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    main {
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      vertical-align: top;
+      background: #fff;
+      width: 60vw;
+      height: 80vh;
+      margin: 10vh 20vw;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3em;
+      width: 100%;
+    }
+
+    .input {
+      margin: 10px 0;
+    }
+
+    #submit {
+      width: 20%;
+      height: 20px;
+      background-color: grey;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+
+    .delay {
+      display: none;
+    }
+
+    #id {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="title">计算器</div>
+    <div>
+      <a href="/source">源代码</a>
+      <a href="/version">版本</a>
+    </div>
+    <div class="form">
+      <input type="text" id="e" class="input">
+      <input type="text" id="delay" class="delay" value="60000">
+      <div id="submit">算吧</div>
+    </div>
+
+    <div id="res">
+    </div>
+  </main>
+</body>
+<script>
+  document.getElementById('submit').addEventListener('click', function () {
+    const e = document.getElementById('delay').value;
+    fetch(`/eval?delay=${document.getElementById('e').value}`, {
+      body: new URLSearchParams({ e }),
+      method: 'POST'
+    }).then(v => v.text()).then(v => {
+      document.getElementById('res').innerHTML += e + '=' + v + '<br/>'
+    });
+  });
+</script>
+
+</html>

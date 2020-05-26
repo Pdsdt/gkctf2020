@@ -1,0 +1,186 @@
+.page {
+    padding-bottom: 120rpx;
+}
+
+/**
+ * 地址
+ */
+.address {
+    padding: 10rpx;
+}
+.address-base, .address-detail {
+    padding: 10rpx 35rpx 10rpx 10rpx;
+}
+.address-detail .icon {
+    width: 30rpx;
+    height: 35rpx !important;
+}
+.address-detail .text {
+    width: calc(100% - 40rpx);
+}
+.address-divider {
+    height: 4px;
+    background-image: url("/images/buy-address-divider.png");
+    background-repeat-y: no-repeat;
+}
+.address-detail .text, .goods-title {
+    line-height: 36rpx;
+}
+.no-address {
+    height: 85rpx;
+    line-height: 85rpx;
+}
+.address-alias {
+  border: 1px solid #d2364c;
+  color: #d2364c;
+  padding: 2rpx 10rpx;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+
+/**
+ * 商品
+ */
+.goods .goods-item:not(:last-child) {
+    border-bottom: 1px dashed #efefef;
+}
+.goods-item {
+    padding: 20rpx 10rpx;
+}
+.goods-title, .goods-spec {
+    margin-bottom: 10rpx;
+}
+.goods-image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+}
+.goods-price {
+    position: relative;
+}
+.buy-number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.goods-base {
+  min-height: 160rpx;
+  margin-left: 180rpx;
+}
+
+/**
+ * 导航
+ */
+.buy-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.buy-nav, .nav-base, .nav-submit button {
+    height: 100rpx;
+}
+.nav-base, .nav-submit button {
+    line-height: 100rpx;
+}
+.nav-base {
+    width: calc(60% - 20rpx);
+    padding: 0 10rpx;
+}
+.nav-submit {
+    width: 40%;
+}
+.nav-submit button {
+    border-radius: 0;
+}
+
+/**
+ * 支付方式
+ */
+.payment-list .item {
+  width: 50%;
+}
+.payment-list .item-content {
+  margin: 20rpx;
+  padding: 20rpx 10rpx;
+}
+.payment-list .item-content image {
+  width: 50rpx;
+  height: 50rpx !important;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.payment-list .selected {
+  border: 1px solid #d2364c;
+  color: #d2364c;
+}
+
+/**
+ * 扩展数据
+ */
+.extension-list {
+  background-color: #ffffeb;
+}
+.extension-list .item {
+  padding: 20rpx 10rpx;
+}
+.extension-list .item:not(:last-child) {
+  border-bottom: 1px dashed #ffe2cf;
+}
+.extension-list .item .text-tips {
+  color: #ff8f44;
+}
+
+/**
+ * 留言
+ */
+.content-textarea-view {
+  height: 220rpx;
+}
+.content-textarea-view textarea {
+  height: 180rpx;
+}
+.content-textarea-view view {
+  padding: 8rpx 10rpx;
+}
+
+/**
+ * 销售+自提 模式选择
+ */
+.buy-header-nav {
+  background: #e9e9e9;
+}
+.buy-header-nav .item {
+  padding: 25rpx 0;
+  width: 50%;
+}
+
+/**
+ * 插件样式区域
+ */
+ /**
+ * 优惠劵
+ */
+.plugins-coupon {
+  padding: 25rpx 40rpx 25rpx 10rpx;
+}
+.plugins-coupon-popup {
+  padding-top: 20rpx;
+}
+.plugins-coupon-popup .close {
+  margin-right: 20rpx;
+}
+.coupon-container {
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 50rpx;
+}
+.coupon-container .item,
+.coupon-container .v-right,
+.coupon-container .v-right .circle {
+  height: 230rpx;
+}
+.coupon-container .not-use-tips {
+  color: #f7b240;
+  font-size: 32rpx;
+}
